@@ -1,0 +1,22 @@
+#pragma once
+
+enum class State
+{
+	Success,		// ê¨å˜
+	Faild,			// é∏îs
+	NowExe,			// é¿çsíÜ
+	End,			// èIóπ
+};
+
+class Object;
+
+class BaseNode
+{
+public:
+	BaseNode();
+	virtual ~BaseNode();
+	virtual void Reset();
+	virtual State Execute(Object& obj) = 0;
+private:
+};
+
